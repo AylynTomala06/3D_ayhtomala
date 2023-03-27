@@ -1,0 +1,43 @@
+:root{
+    --primary: #111B54;
+    --light: #ffffff;
+    --grey: #efefef;
+}
+body{
+    overflow: hidden;
+    font-family:'Mulish', sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+a:hover {
+    text-decoration: none;
+}
+.bg-primary {background-color: var(--primary) !important;}
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo{
+    padding: .875rem 1.25rem;
+}
+#sidebar-container .menu{
+    width:12rem;
+    text-decoration: none;
+
+}
+h4{
+    font-size: x-large;
+}
+
+#card .card-body{
+     color: var(--primary);
+}
+#agregalibro{
+    width:12rem;
+}
+hr{border-top: 2px solid #5fc3e6;
+   border-bottom: 2px solid #3fe4d2;
+   border-left:none;
+   border-right:none;
+   height: 6px;
+ }

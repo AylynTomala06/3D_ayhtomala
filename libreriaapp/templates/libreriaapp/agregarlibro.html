@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Agregar Libro</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/stylesag.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+{% block contenido %}
+    <br>
+ <div class="container mt-2 mb-4 d-flex justify-content-center">
+    <br>
+     <br>
+    <div class="card px-1 py-4">
+        <div class="card-body">
+            <h2 class="card-title mb-3">Ingresar a libro</h2>
+            <h6 class="information mt-4">Por favor ingrese los datos requeridos</h6>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <hr>
+                <div class=" d-flex justify-content-end">
+                    <input type="reset" value="Cancelar" class="btn btn-primary btn-block">
+                      &nbsp;
+                    <input type="submit" value="Guardar" class="btn btn-primary btn-block">
+                </div>
+             </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

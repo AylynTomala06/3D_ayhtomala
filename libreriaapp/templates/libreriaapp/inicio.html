@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BIBLIOTECA</title>
+</head>
+<body>
+{% extends 'libreriaapp/base.html' %}
+{% block contenido %}
+{% load humanize %}
+<div class="card" id="card">
+    <div class="card-body ">
+        <h3>Listado de libros</h3>
+        <hr>
+        <table class="table table-striped table-hover table-responsive-sm">
+<tr>
+    <th>#</th>
+    <th>Titulo</th>
+    <th>Autor</th>
+    <th>Categoria</th>
+    <th>Fecha de lanzamiento</th>
+    <th>Opciones</th>
+
+</tr>
+    {% for p in libros %}
+      <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.titulo | title}}</td>
+        <td>{{ p.autor |title}}</td>
+        <td>{{ p.categoria |title}}</td>
+        <td>{{ p.fecha_lanzamiento }}</td>
+        <td>
+            <a>modificar</a>
+        </td>
+
+      </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>

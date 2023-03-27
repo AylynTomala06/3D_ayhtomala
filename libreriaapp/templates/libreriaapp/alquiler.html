@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>alquiler</title>
+</head>
+<body>
+{% extends 'libreriaapp/base.html' %}
+{% block contenido %}
+{% load humanize %}
+<div class="card">
+    <div class="card-body">
+        <h3>Listado de alquiler</h3>
+        <hr>
+        <table class="table table-striped table-hover table-responsive-sm">
+<tr>
+    <th>#</th>
+    <th>Alquiler</th>
+    <th>Libro</th>
+    <th>Fecha de entrega</th>
+    <th>Fecha de devolver</th>
+</tr>
+            {% for p in alquiler %}
+
+    <tr>
+        <td>{{ p.id_alquiler }}</td>
+        <td>{{ p.id_ulector |title }}</td>
+        <td>{{ p.id_libro |title}}</td>
+        <td>{{ p.fecha_salida }}</td>
+        <td>{{ p.fecha_entrada }}</td>
+    </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>
